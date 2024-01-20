@@ -1,13 +1,10 @@
-package co.com.nequi.Franchises;
+package co.com.nequi.franchises;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class FranchisesApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
 
 }

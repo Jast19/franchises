@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'commerce'
+      MYSQL_USER: 'jast'
+      MYSQL_PASSWORD: '1a2b3c4d5e'
+      MYSQL_ROOT_PASSWORD: '1a2b3c4d5e'
+      command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/Users/alexis/mysql
+volumes:
+  my-db:

@@ -1,4 +1,4 @@
-package co.com.nequi.Franchises;
+package co.com.nequi.franchises;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
