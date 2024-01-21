@@ -1,5 +1,6 @@
 package co.com.nequi.franchises.franchise.adapter.out.persistence.entitys;
 
+import co.com.nequi.franchises.franchise.domain.module.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,4 +22,11 @@ public class ProductEntity {
     private String name;
     private Integer stock;
 
+    public static ProductEntity entity(Product product){
+        return new ProductEntity(null, product.getSubsidiaryId(), product.getName(), product.getStock());
+    }
+
+    public static Product domain(ProductEntity entity){
+        return new Product(entity.getId(), entity.getSubsidiaryId(), entity.getName(), entity.getStock());
+    }
 }

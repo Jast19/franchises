@@ -1,4 +1,4 @@
-package co.com.nequi.franchises.franchise.domain.module;
+package co.com.nequi.franchises.franchise.adapter.in.api.request;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -9,9 +9,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Franchise {
+public class FranchiseUpdateRequest {
 
+    @NotNull
     private Long id;
-    private String name;
 
+    @NotNull
+    @NotEmpty
+    private String name;
 }
