@@ -1,17 +1,5 @@
 version: '3.3'
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: franchise
-    container_name: app-container
-    ports:
-      - "8080:8080"
-    networks:
-      - my-network
-    environment:
-      - profile=development
   db:
     image: mysql
     restart: always
@@ -29,6 +17,20 @@ services:
       - my-network
     volumes:
       - my-db:/Users/alexis/mysql
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: franchise
+    container_name: app-container
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+    environment:
+      - profile=development
+    depends_on:
+      - db
 volumes:
   my-db:
 
